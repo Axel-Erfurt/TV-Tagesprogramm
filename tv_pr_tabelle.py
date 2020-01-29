@@ -47,7 +47,7 @@ dictList = {'ard': 71, 'zdf': 37, 'zdf neo': 659, 'zdf info': 276, 'arte': 58, '
             'n24 doku': 12045, 'kabel 1 doku': 12043, 'sport 1': 64, 'super rtl': 43, \
             'sat 1 gold': 774, 'vox up': 12125, 'sixx': 694, 'servus tv': 660, \
             'welt': 175, 'orf 1': 54, 'orf 2': 55, 'orf 3': 56, 'tele 5': 277, '7maxx': 783, \
-            'dmaxx': 507, 'dw': 300, 'fox': 565, 'srf 1': 59, 'srf 2': 60, 'srf info': 231, '3 +': 544}
+            'dmaxx': 507, 'dw': 300, 'fox': 565, 'srf 1': 59, 'srf 2': 60}
 
 
 myday = f"{date.today():%d}"
@@ -59,9 +59,19 @@ response_json = response.json()
 
 ### Daten jedes in dictList enthaltenen Senders verarbeiten und zu HTML konvertieren
 def getValues(id):
-    for ch in dictList:
+    for ch in dictList:                                                                                    
         titleList.append(f'<a style="text-decoration: none;" href="#{ch}">\
                         <font color="#8f5902">{ch.upper()}</font>&nbsp;&nbsp;</a>')
+    titleList.append(f'<a style="text-decoration: none;" \
+                        href="https://www.hoerzu.de/text/tv-programm/jetzt.php" target="_blank">\
+                        <font color="#a40000">Jetzt im TV</font>&nbsp;&nbsp;</a>')
+    titleList.append(f'<a style="text-decoration: none;" \
+                        href="https://www.hoerzu.de/text/tv-programm/gleich.php" \
+                        target="_blank"><font color="#5c3566">Danach im TV</font>&nbsp;&nbsp;</a>')
+    titleList.append(f'<a style="text-decoration: none;" \
+                        href="https://www.hoerzu.de/text/tv-programm/tipps.php" \
+                        target="_blank"><font color="#095484">TV Tipps</font>&nbsp;&nbsp;</a>')                        
+                        
     
     for i in response_json:
         if i['id'] == id:
