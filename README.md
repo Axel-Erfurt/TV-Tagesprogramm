@@ -21,5 +21,13 @@ entfernen.
 
 Zwischen jedem paar muß ein Komma stehen, nur nach dem letzten nicht.
 
+__Suche__
+
+im Terminal:
+
+`python3 tv_pr_suche.py`
+
+Suchbegriff eingeben -> ENTER
+
 ![screenshot](https://github.com/Axel-Erfurt/TV-Tagesprogramm/blob/master/tv_pr_screenshot.png)
 
