@@ -11,7 +11,6 @@ import time
 import locale
 from datetime import date
 import webbrowser
-import tempfile
 import os
 
 ### html header
