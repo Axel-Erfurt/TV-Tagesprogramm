@@ -9,9 +9,21 @@ Dieses Python Script zeigt das TV Programm des Tages im Browser mithilfe der Dat
 
 Ohne lästige Werbung.
 
+__Starten__
+
+im Terminal:
+
+`python3 tv_pr_tabelle.py`
+
+oder für Version mit dunklem Hintergrund
+
+`python3 tv_pr_tabelle_dark.py`
+
 Sender anklicken um zum jeweiligen Sender zu springen.
 
-Man kann Sender entfernen indem man in dictList das Paar samt Komma entfernt.
+__Sender bearbeiten_
+
+Man kann Sender entfernen indem man in **dictList** das Paar samt Komma entfernt.
 
 z.B. Servus TV entfernen:
 
