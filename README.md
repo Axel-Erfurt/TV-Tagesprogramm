@@ -43,3 +43,6 @@ Suchbegriff eingeben -> ENTER
 
 ![screenshot](https://github.com/Axel-Erfurt/TV-Tagesprogramm/blob/master/tv_pr_screenshot.png)
 
+
+![screenshot_dark](https://github.com/Axel-Erfurt/TV-Tagesprogramm/blob/master/screensht_dark.png)
+
