@@ -10,6 +10,7 @@ import requests
 import time
 import locale
 from datetime import date
+from datetime import datetime
 import webbrowser
 import os
 
@@ -54,7 +55,7 @@ myday = f"{date.today():%d}"
 print("Tag:", myday)
 
 ### json von Hoerzu laden
-response = requests.get('http://mobile.hoerzu.de/programbystation')
+response = requests.get('http://mobile.hoerzu.de/programbystation?data={{"date":{})}}'.format(int(datetime.now().timestamp())))
 response_json = response.json()
 
 ### Daten jedes in dictList enthaltenen Senders verarbeiten und zu HTML konvertieren
@@ -96,7 +97,7 @@ def getValues(id):
                 if day == myday and int(start.replace(":", "")) >= 1599 and int(start.replace(":", "")) < 2359:
                     pm = f"{start} {title}<br>"  
                     pmlist.append(pm)   
-                if not day == myday:
+                if day > myday:
                     pmd = f"{start} {title}<br>"  
                     pmdlist.append(pmd) 
             
