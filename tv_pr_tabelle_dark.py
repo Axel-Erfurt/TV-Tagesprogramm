@@ -9,7 +9,7 @@
 import requests
 import time
 import locale
-from datetime import date
+from datetime import date, datetime
 import webbrowser
 import os
 
@@ -54,7 +54,7 @@ myday = f"{date.today():%d}"
 print("Tag:", myday)
 
 ### json von Hoerzu laden
-response = requests.get('http://mobile.hoerzu.de/programbystation')
+response = requests.get('http://mobile.hoerzu.de/programbystation?data={{"date":{})}}'.format(int(datetime.now().timestamp())))
 response_json = response.json()
 
 ### Daten jedes in dictList enthaltenen Senders verarbeiten und zu HTML konvertieren
